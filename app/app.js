@@ -2,11 +2,13 @@
 
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { Router  } from 'react-native-router-flux';
+import { Router, Scene } from 'react-native-router-flux';
 import { connect, Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 
-import Navigator from './components/navigator';
+import CombatActionsView from './components/combat-actions-view';
+import NavigationDrawer from './components/navigation-drawer';
+import DevTools from './components/dev-tools';
 import reducers from './reducers';
 //import AppRouter from './router';
 
@@ -19,16 +21,16 @@ export default class App extends Component {
 
   render() {
     return (
-        <Provider store={store}>
-          <RouterWithRedux>
-            <Scene key="drawer" component={Navigator} open={false}>
-              <Scene key="main" tabs={true}>
-                <Scene key="combatActions" component={CombatActionsView} title="Combat Actions" initial={true} />
-              </Scene>
+      <Provider store={store}>
+        <RouterWithRedux>
+          <Scene key="drawer" component={NavigationDrawer} open={false}>
+            <Scene key="main" tabs={true}>
+              <Scene key="combatActions" component={CombatActionsView} title="Combat Actions" initial={true} />
+              <Scene key="devTools" component={DevTools} />
             </Scene>
-            {//<Scene key="devTools" component={DevTools} />}
-          </RouterWithRedux>
-          </Provider>
-        );
+          </Scene>
+        </RouterWithRedux>
+       </Provider>
+    );
   }
 }
