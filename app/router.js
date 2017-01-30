@@ -10,11 +10,11 @@ import CombatActionsView from './components/combat-actions-view';
 import DevTools from './components/dev-tools';
 
 const scenes = Actions.create(
-    <Scene key="root">
-        <Scene key="navigator" component={Navigator} open={true}>
-            <Scene key="combatActions" component={CombatActionsView} title="Combat Actions" tabs={true} />
-            <Scene key="devTools" component={DevTools} initial={true} />
-        </Scene>
+    <Scene key="drawer" component={Navigator} open={false}>
+      <Scene key="main" tabs={true}>
+        <Scene key="combatActions" component={CombatActionsView} title="Combat Actions" initial={true} />
+      </Scene>
+      {//<Scene key="devTools" component={DevTools} />}
     </Scene>
 )
 
