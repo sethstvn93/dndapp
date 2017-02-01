@@ -5,7 +5,7 @@ import Drawer from 'react-native-drawer';
 import { Text } from 'react-native';
 import { Actions, DefaultRenderer } from 'react-native-router-flux';
 
-import DrawerContent from './drawer-content';
+import NavigationDrawerContent from '../NavigationDrawerContent';
 
 export default class NavigationDrawer extends Component {
 
@@ -15,7 +15,7 @@ export default class NavigationDrawer extends Component {
         return (
             <Drawer ref="navigation"
                 open={state.open}
-                content={<DrawerContent />}
+                content={<NavigationDrawerContent />}
                 openDrawerOffset={0.2}
                 captureGestures={true}
                 panOpenMask={0.05} >
