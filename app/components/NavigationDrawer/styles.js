@@ -2,8 +2,7 @@
 
 export default {
   drawer: {
-    backgroundColor: '#eee',
-    shadowColor: '#ff0000',
+    backgroundColor: '#333',
     elevation: 10,
 // TODO: Shadow support for iOS
 //    shadowOffset: { width: 10, height: 10 },
@@ -11,6 +10,7 @@ export default {
 //    shadowRadius: 100
   },
   main: {
+    backgroundColor: '#333',
     paddingLeft: 3
   }
 }
