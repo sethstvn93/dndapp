@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import { TouchableNativeFeedback, View, Text } from 'react-native';
-import { Actions } from 'react-native-router-flux';
 
 import styles from './styles';
 
