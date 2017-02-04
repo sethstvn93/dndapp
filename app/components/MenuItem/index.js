@@ -11,7 +11,7 @@ export default class MenuItem extends Component {
     return (
       <TouchableNativeFeedback onPress={this.props.action}>
         <View style={styles.menuItem}>
-          <View style={styles.activeIndicator} />
+          <View style={this.props.active ? styles.activeIndicatorActive : styles.activeIndicatorInactive} />
           <Text style={styles.text}>{this.props.text}</Text>
         </View>
       </TouchableNativeFeedback>
@@ -21,5 +21,6 @@ export default class MenuItem extends Component {
 
 MenuItem.propTypes = {
   text: React.PropTypes.string.isRequired,
-  action: React.PropTypes.func
+  action: React.PropTypes.func,
+  active: React.PropTypes.bool
 }

@@ -9,9 +9,12 @@ export default StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#292929'
   },
-  activeIndicator: {
-    backgroundColor: '#77f',
+  activeIndicatorInactive: {
     width: 6
+  },
+  activeIndicatorActive: {
+    width: 6,
+    backgroundColor: '#77f'
   },
   text: {
     fontSize: 15,

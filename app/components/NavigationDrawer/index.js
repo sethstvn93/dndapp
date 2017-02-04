@@ -13,10 +13,13 @@ export default class NavigationDrawer extends Component {
   render() {
     const state = this.props.navigationState;
     const children = state.children;
+    const mainView = state.children[state.index];
+    const activeTab = mainView.children[mainView.index];
+
     return (
       <Drawer ref="navigation"
           open={state.open}
-          content={<NavigationDrawerContent />}
+          content={<NavigationDrawerContent activeTab={activeTab} />}
           type="overlay"
           openDrawerOffset={0.2}
           captureGestures={true}
