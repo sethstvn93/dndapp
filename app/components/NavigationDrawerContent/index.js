@@ -13,6 +13,9 @@ export default class NavigationDrawerContent extends Component {
 
     return (
       <View>
+        <MenuItem action={Actions.characterSheet}
+            text='Character'
+            active={activeTab.sceneKey === 'characterSheet'} />
         <MenuItem action={Actions.combatActions}
             text='Combat Actions'
             active={activeTab.sceneKey === 'combatActions'} />

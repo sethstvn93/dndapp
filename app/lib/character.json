@@ -1,0 +1,77 @@
+{
+  "abilities": {
+    "charisma": {
+      "bonus": 2,
+      "save": 2,
+      "saveModifier": 0,
+      "saveProficiency": 0,
+      "score": 14
+    },
+    "constitution": {
+      "bonus": 2,
+      "save": 5,
+      "saveModifier": 0,
+      "saveProficiency": 1,
+      "score": 14
+    },
+    "dexterity": {
+      "bonus": 4,
+      "save": 4,
+      "saveModifier": 0,
+      "saveProficiency": 0,
+      "score": 18
+    },
+    "intelligence": {
+      "bonus": 1,
+      "save": 1,
+      "saveModifier": 0,
+      "saveProficiency": 0,
+      "score": 13
+    },
+    "strength": {
+      "bonus": 2,
+      "save": 5,
+      "saveModifier": 0,
+      "saveProficiency": 1,
+      "score": 14
+    },
+    "wisdom": {
+      "bonus": 1,
+      "save": 1,
+      "saveModifier": 0,
+      "saveProficiency": 0,
+      "score": 12
+    }
+  },
+  "inventory": {
+    "coins": {
+      "cp": 440,
+      "sp": 4700,
+      "gp": 1145,
+      "pp": 151
+    },
+    "items": [
+      {
+        "name": "Ball Bearings",
+        "count": 1,
+        "weight": 2,
+        "cost": "1 gp",
+        "carried": true
+      },
+      {
+        "name": "Bedroll",
+        "count": 1,
+        "weight": 7,
+        "cost": "1 gp",
+        "carried": true
+      },
+      {
+        "name": "Bell",
+        "count": 1,
+        "weight": 0.05,
+        "cost": "1 gp",
+        "carried": false
+      }
+    ]
+  }
+}
