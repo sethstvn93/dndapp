@@ -1,8 +1,14 @@
 'use strict'
 
 import { StyleSheet } from 'react-native';
+import Dimensions from 'Dimensions';
+
+const { height, width } = Dimensions.get('window');
 
 export default StyleSheet.create({
+  wrapper: {
+    flex: 1
+  },
   main: {
     backgroundColor: '#333',
     minHeight: 75,
@@ -43,5 +49,25 @@ export default StyleSheet.create({
   },
   spacer: {
     flex: 1
+  },
+  modal: {
+    justifyContent: 'flex-start'
+  },
+  modalContent: {
+    height: height * .75,
+    width: width * .9,
+    backgroundColor: '#333',
+    elevation: 10
+  },
+  modalFooter: {
+    borderTopWidth: 1,
+    borderTopColor: '#292929',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    padding: 10
+  },
+  footerText: {
+    color: '#ccc',
+    fontSize: 30
   }
 });
