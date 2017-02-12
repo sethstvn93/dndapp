@@ -25,10 +25,8 @@ export default class App extends Component {
       <Provider store={store}>
         <RouterWithRedux hideNavBar>
           <Scene key="drawer" component={NavigationDrawer} open={false}>
-            <Scene key="main" tabs={true} >
-              <Scene key="characterSheet" component={CharacterView} initial={true} >
-                <Scene key="strengthDescription" component={StrengthDescriptionModal} />
-              </Scene>
+            <Scene key="main" tabs={true}>
+              <Scene key="characterSheet" component={CharacterView} initial={true} />
               <Scene key="combatActions" component={CombatActionsView} title="Combat Actions" type="modal" />
             </Scene>
           </Scene>

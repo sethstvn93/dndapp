@@ -2,7 +2,8 @@
 
 import React, { Component } from 'react';
 import { TouchableNativeFeedback, View, Text } from 'react-native';
-import Modal from 'react-native-root-modal';
+
+import ModalTemplate from '../ModalTemplate';
 
 import styles from './styles';
 
@@ -15,7 +16,6 @@ export default class AbilityCard extends Component {
     };
 
     this.showDescriptionModal = this.showDescriptionModal.bind(this);
-    this.hideDescriptionModal = this.hideDescriptionModal.bind(this);
   }
 
   render() {
@@ -43,27 +43,15 @@ export default class AbilityCard extends Component {
             </View>
           </View>
         </TouchableNativeFeedback>
-
-        <Modal visible={this.state.modalVisible}>
-          <View style={styles.modalContent}>
-            <DescriptionModal />
-            <TouchableNativeFeedback onPress={this.hideDescriptionModal}>
-              <View style={styles.modalFooter}>
-                <Text style={styles.footerText}>Close</Text>
-              </View>
-            </TouchableNativeFeedback>
-          </View>
-        </Modal>
+        <ModalTemplate ref="descriptionModal" visible={this.state.modalVisible}>
+          <DescriptionModal />
+        </ModalTemplate>
       </View>
     );
   }
 
   showDescriptionModal() {
-    this.setState({ modalVisible: true });
-  }
-
-  hideDescriptionModal() {
-    this.setState({ modalVisible: false });
+    this.refs.descriptionModal.showModal();
   }
 }
 

@@ -42,20 +42,20 @@ export default class AbilitiesView extends Component {
             ability={this.props.abilities.constitution}
             descriptionModal={ConstitutionDescriptionModal} />
         <AbilityCard
-          icon={IntelligenceIcon}
-          abilityName="INT"
-          ability={this.props.abilities.intelligence}
-          descriptionModal={IntelligenceDescriptionModal} />
+            icon={IntelligenceIcon}
+            abilityName="INT"
+            ability={this.props.abilities.intelligence}
+            descriptionModal={IntelligenceDescriptionModal} />
         <AbilityCard
-          icon={WisdomIcon}
-          abilityName="WIS"
-          ability={this.props.abilities.wisdom}
-          descriptionModal={WisdomDescriptionModal} />
+            icon={WisdomIcon}
+            abilityName="WIS"
+            ability={this.props.abilities.wisdom}
+            descriptionModal={WisdomDescriptionModal} />
         <AbilityCard
-          icon={CharismaIcon}
-          abilityName="CHA"
-          ability={this.props.abilities.charisma}
-          descriptionModal={CharismaDescriptionModal} />
+            icon={CharismaIcon}
+            abilityName="CHA"
+            ability={this.props.abilities.charisma}
+            descriptionModal={CharismaDescriptionModal} />
       </View>
     );
   }
